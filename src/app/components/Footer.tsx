@@ -1,15 +1,18 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Instagram, FileText } from 'lucide-react'; 
+import { Mail, MapPin, Instagram, FileText, MessageCircle } from 'lucide-react'; 
 import logo from "../../assets/logo.png";
 
 export function Footer() {
-  const whatsappUrl = "https://wa.me/5535999300157?text=Olá! Vim pelo site.";
+  // 1. URLs CONFIGURADAS PARA CADA CONTATO
+  const whatsappPaiUrl = "https://wa.me/5535999300157?text=Olá Rodinere! Gostaria de um orçamento.";
+  const whatsappYagoUrl = "https://wa.me/5535997480242?text=Olá Yago! Gostaria de um orçamento."; 
 
   return (
     <footer className="bg-slate-900 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           
+          {/* Coluna 1: Sobre */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +49,6 @@ export function Footer() {
               <li><a href="#home" className="text-slate-400 hover:text-[#00a3cc] transition-colors">Home</a></li>
               <li><a href="#produtos" className="text-slate-400 hover:text-[#00a3cc] transition-colors">Produtos</a></li>
               <li><a href="#sobre-nos" className="text-slate-400 hover:text-[#00a3cc] transition-colors">Sobre Nós</a></li>
-              <li><a href={whatsappUrl} target="_blank" className="text-slate-400 hover:text-[#00a3cc] transition-colors">Contato</a></li>
             </ul>
           </motion.div>
 
@@ -71,27 +73,54 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#00a3cc] flex-shrink-0" />
-                <a href={whatsappUrl} target="_blank" className="text-slate-400 hover:text-white transition-colors">
-                  (35) 99930-0157
+            <h4 className="text-lg font-semibold mb-6 text-[#00a3cc]">Fale Conosco</h4>
+            <ul className="space-y-6">
+              
+              <li>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-2">Vendas e Orçamentos</p>
+                <a 
+                  href={whatsappPaiUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors group"
+                >
+                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
+                    <MessageCircle className="w-5 h-5 text-[#00a3cc] group-hover:text-white" />
+                  </div>
+                  <div>
+                    <span className="block font-medium leading-none mb-1">Fale com Rodinere</span>
+                    <span className="text-xs opacity-60">Toque para mensagem</span>
+                  </div>
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[#00a3cc] flex-shrink-0 mt-1" />
-                <span className="text-slate-400 break-all">limauniformes092@gmail.com</span>
+
+              <li>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-2">Vendas e Orçamentos</p>
+                <a 
+                  href={whatsappYagoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors group"
+                >
+                  <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
+                    <MessageCircle className="w-5 h-5 text-[#00a3cc] group-hover:text-white" />
+                  </div>
+                  <div>
+                    <span className="block font-medium leading-none mb-1">Falar com Yago</span>
+                    <span className="text-xs opacity-60">Toque para mensagem</span>
+                  </div>
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#00a3cc] flex-shrink-0 mt-1" />
-                <span className="text-slate-400">Três Pontas - MG</span>
-              </li>
-              <li className="flex items-start gap-3 pt-2 border-t border-slate-800">
-                <FileText className="w-5 h-5 text-[#00a3cc] flex-shrink-0 mt-1" />
-                <span className="text-slate-400 text-sm">
-                  CNPJ: 59.352.009/0001-04 
-                </span>
+
+              <li className="pt-4 border-t border-slate-800 space-y-3">
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-4 h-4 text-[#00a3cc]" />
+                  <span className="text-slate-400 text-sm">Três Pontas - MG</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FileText className="w-4 h-4 text-[#00a3cc]" />
+                  <span className="text-slate-400 text-xs">CNPJ: 59.352.009/0001-04</span>
+                </div>
               </li>
             </ul>
           </motion.div>

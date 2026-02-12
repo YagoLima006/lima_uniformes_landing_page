@@ -106,7 +106,7 @@ export function Footer() {
                     <MessageCircle className="w-5 h-5 text-[#00a3cc] group-hover:text-white" />
                   </div>
                   <div>
-                    <span className="block font-medium leading-none mb-1">Falar com Yago</span>
+                    <span className="block font-medium leading-none mb-1">Fale com Yago</span>
                     <span className="text-xs opacity-60">Toque para mensagem</span>
                   </div>
                 </a>

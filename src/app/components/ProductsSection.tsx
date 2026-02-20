@@ -1,13 +1,13 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 
-// IMPORTAÇÃO EXATA (Nomes com hifens conforme seu print)
 import imgManguito from '../../assets/manguito.png';
 import imgMangaLongaField from '../../assets/cdt-manga-curta.png'; 
 import imgMangaCurtaStore from '../../assets/cdt-manga-longa.png'; 
 import imgJaqueta from '../../assets/jaqueta-cocatrel.png';
 import imgCasaco from '../../assets/casaco-body.png';
 import imgCafe from '../../assets/camisa-cafe.jpeg'; 
+import imgMangaCurtaCdt from '../../assets/manga-curta-cdt.png';
 
 const products = [
   {
@@ -45,13 +45,13 @@ const products = [
     image: imgCasaco,
     description: 'Tecido tecnológico de alta performance que oferece flexibilidade para instrutores e funcionários .',
   },
- {
+  {
     id: 6,
-    name: 'Camisa Social Profissional',
-    category: 'Corporativo',
-    image: imgCafe,
-    description: 'Desenvolvida para proporcionar uma imagem séria e elegante, com tecidos de fácil manutenção para o uso diário.',
-  },
+    name: 'Camisa Manga Curta UV50+ CDT',
+    category: 'Campo/Proteção',
+    image: imgMangaCurtaCdt,
+    description: 'Camisa de manga curta com proteção UV50+, ideal para atividades ao ar livre, garantido conforto e segurança para os trabalhadores expostos ao sol.',
+  }
 ];
 
 export function ProductsSection() {

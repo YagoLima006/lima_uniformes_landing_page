@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Award } from 'lucide-react';
 
-// 1. IMPORTAÇÃO COM O NOME CORRIGIDO
 import imgAboutShirt from '../../assets/camisa-cafe-mesa.jpeg';
 
 export function AboutSection() {
@@ -24,7 +23,6 @@ export function AboutSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Coluna da Imagem */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,7 +52,6 @@ export function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* Coluna do Texto */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +86,6 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Missão, Visão e Valores */}
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Award } from 'lucide-react';
 
-import imgAboutShirt from '../../assets/camisa-cafe-mesa.jpeg';
+import imgAboutShirt from '../../assets/dellas-mesa.png';
 
 export function AboutSection() {
   return (

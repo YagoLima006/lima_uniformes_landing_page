@@ -47,7 +47,7 @@ const products = [
   },
   {
     id: 6,
-    name: 'Camisa Manga Curta UV50+ CDT',
+    name: 'Camisa Manga Curta UV50+',
     category: 'Campo/Proteção',
     image: imgMangaCurtaCdt,
     description: 'Camisa de manga curta com proteção UV50+, ideal para atividades ao ar livre, garantido conforto e segurança para os trabalhadores expostos ao sol.',

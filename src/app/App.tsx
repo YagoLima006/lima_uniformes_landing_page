@@ -7,12 +7,14 @@ import { Footer } from '@/app/components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden bg-white">
       <Navbar />
-      <HeroSection />
-      <ProductsSection />
-      <AboutSection />
-      <FabricsSection />
+      <main>
+        <HeroSection />
+        <ProductsSection />
+        <AboutSection />
+        <FabricsSection />
+      </main>
       <Footer />
     </div>
   );
